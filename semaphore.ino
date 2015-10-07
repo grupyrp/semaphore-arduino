@@ -17,7 +17,7 @@ void setup() {
 }
 
 void shutlights() {
-  digitalWrite(RED, OFF);
+  digitalWrite(RED, ON);
   digitalWrite(YELLOW, OFF);
   digitalWrite(GREEN, OFF);
 }
@@ -28,7 +28,7 @@ void loop() {
   switch (inChar) {
     case 'r':
       shutlights();
-      digitalWrite(RED, ON);
+      digitalWrite(RED, OFF);
       break;
     case 'y':
       shutlights();
