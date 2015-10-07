@@ -26,6 +26,9 @@ void loop() {
   char inChar = (char)Serial.read();
   
   switch (inChar) {
+    case 'a':
+      Serial.write("semaphore\n");
+      break;
     case 'r':
       shutlights();
       digitalWrite(RED, OFF);
