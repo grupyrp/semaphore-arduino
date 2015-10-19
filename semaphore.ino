@@ -1,7 +1,4 @@
 
-#define ON LOW
-#define OFF HIGH
-
 #define A0 RED
 #define A1 YELLOW
 #define A2 GREEN
@@ -17,9 +14,9 @@ void setup() {
 }
 
 void shutlights() {
-  digitalWrite(RED, ON);
-  digitalWrite(YELLOW, OFF);
-  digitalWrite(GREEN, OFF);
+  digitalWrite(RED, LOW);
+  digitalWrite(YELLOW, LOW);
+  digitalWrite(GREEN, LOW);
 }
 
 void loop() {
@@ -31,15 +28,15 @@ void loop() {
       break;
     case 'r':
       shutlights();
-      digitalWrite(RED, OFF);
+      digitalWrite(RED, HIGH);
       break;
     case 'y':
       shutlights();
-      digitalWrite(YELLOW, ON);
+      digitalWrite(YELLOW, HIGH);
       break;
     case 'g':
       shutlights();
-      digitalWrite(GREEN, ON);
+      digitalWrite(GREEN, HIGH);
       break;
   }
 }
